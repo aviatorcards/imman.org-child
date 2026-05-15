@@ -141,169 +141,214 @@ Text Domain: imman-org-child
    2. MEMBER PROFILE PAGE
    ----------------------------------------------------------------------------- */
 
-/* Profile wrapper */
+/* Profile card: thin gold top accent, soft elevation */
 .um-profile {
-    border-radius: 8px !important;
+    border-radius: 14px !important;
     overflow: hidden !important;
-    box-shadow: var(--shadow) !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 24px rgba(27, 51, 128, 0.06) !important;
+    border-top: 3px solid var(--color-gold) !important;
 }
 
-/* Cover photo area — navy gradient when no custom cover is set */
+/* Cover: short, subtle blue-tinted wash (not a heavy gradient) */
 .um-cover {
-    background: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-blue) 60%, #3d6bda 100%) !important;
-    min-height: 180px !important;
+    background: linear-gradient(180deg, var(--color-bg-alt) 0%, #f7f8fb 100%) !important;
+    min-height: 130px !important;
+    border-bottom: 1px solid rgba(27, 51, 128, 0.05) !important;
 }
-
-/* Cover overlay hover state */
 .um-cover-overlay {
-    background: rgba(27, 51, 128, 0.7) !important;
+    background: rgba(27, 51, 128, 0.45) !important;
 }
 
-/* Profile header: white background below cover */
+/* Header zone (white card under the cover) */
 .um-header {
     background: #ffffff !important;
-    padding: 0 28px 20px !important;
-    border-bottom: 2px solid var(--color-bg-alt) !important;
+    padding: 0 36px 28px !important;
+    border-bottom: 1px solid var(--color-bg-alt) !important;
 }
 
-/* Avatar: gold ring border */
+/* Avatar: white ring lifts it off the cover, soft shadow (no gold ring) */
 .um-profile-photo a.um-profile-photo-img {
-    border: 4px solid var(--color-gold) !important;
+    border: 4px solid #ffffff !important;
     border-radius: 50% !important;
-    box-shadow: 0 4px 16px rgba(42, 80, 200, 0.15) !important;
-    transition: box-shadow 0.2s ease !important;
+    box-shadow: 0 6px 20px rgba(27, 51, 128, 0.18) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
-
 .um-profile-photo a.um-profile-photo-img:hover {
-    box-shadow: 0 6px 24px rgba(42, 80, 200, 0.25) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(27, 51, 128, 0.22) !important;
 }
-
-/* Profile avatar image */
 .um-profile-photo a.um-profile-photo-img img {
     border-radius: 50% !important;
 }
 
-/* Display name heading */
+/* Display name */
 .um-name a,
 .um-name span {
     font-family: var(--font-heading) !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: var(--color-blue-dark) !important;
-    font-size: 1.6rem !important;
+    font-size: 1.75rem !important;
     letter-spacing: -0.025em !important;
+    line-height: 1.2 !important;
     transition: color 0.2s ease !important;
 }
-
 .um-name a:hover {
-    color: var(--color-gold-dark) !important;
+    color: var(--color-blue) !important;
 }
 
-/* Role/meta tag under name */
-.um-meta {
-    margin-top: 4px !important;
-}
-
+/* Meta line under name (role, location, etc.) */
+.um-meta { margin-top: 6px !important; }
 .um-meta span {
     font-family: var(--font-body) !important;
-    font-size: 0.85rem !important;
+    font-size: 0.9rem !important;
     color: var(--color-grey) !important;
 }
-
 .um-meta span i {
     color: var(--color-blue) !important;
+    margin-right: 4px !important;
 }
-
-/* Profile navigation tabs */
-.um-profile-nav {
-    background: #ffffff !important;
-    border-bottom: 2px solid var(--color-bg-alt) !important;
-    padding: 0 28px !important;
-}
-
-.um-profile-nav-item a {
-    font-family: var(--font-heading) !important;
-    font-size: 0.85rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.04em !important;
-    text-transform: uppercase !important;
-    color: var(--color-grey) !important;
-    padding: 14px 10px !important;
-    border-bottom: 3px solid transparent !important;
-    transition: color 0.2s ease, border-color 0.2s ease !important;
-}
-
-.um-profile-nav-item a:hover,
-.um-profile-nav-item.active a {
-    color: var(--color-blue) !important;
-    border-bottom-color: var(--color-gold) !important;
-}
-
-/* Profile body / field display area */
-.um-profile .um-profile-body {
-    background: #ffffff !important;
-    padding: 28px !important;
-}
-
-/* Field labels in view mode */
-.um-profile.um-viewing .um-field-label label {
-    font-family: var(--font-heading) !important;
-    font-size: 0.78rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.08em !important;
-    text-transform: uppercase !important;
-    color: var(--color-grey) !important;
-}
-
-/* Field values in view mode */
-.um-profile.um-viewing .um-field-value {
-    font-family: var(--font-body) !important;
-    font-size: 1rem !important;
-    color: var(--color-black) !important;
-}
-
-/* Profile edit button */
-.um-profile-edit {
-    background: var(--color-blue) !important;
-    border-radius: 4px !important;
-    font-family: var(--font-heading) !important;
-    font-size: 0.8rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.06em !important;
-    text-transform: uppercase !important;
-    padding: 9px 18px !important;
-    transition: background 0.2s ease, transform 0.2s ease !important;
-}
-
-.um-profile-edit:hover {
-    background: var(--color-blue-dark) !important;
-    transform: translateY(-1px) !important;
-}
-
-.um-profile-edit i {
-    color: var(--color-gold) !important;
-}
-
-/* Bio / meta text block */
 .um-meta-text p {
     font-family: var(--font-body) !important;
     font-size: 0.95rem !important;
     color: var(--color-grey) !important;
-    line-height: 1.65 !important;
+    line-height: 1.7 !important;
 }
 
-/* Inline tag/badge elements (role, location) */
+/* Header action buttons (edit profile, settings) — outlined pill */
+.um-profile-meta .um-button,
+.um-profile-edit-btn .um-button,
+.um-profile-meta a.um-button:visited,
+.um-profile-edit-btn a.um-button:visited {
+    background: transparent !important;
+    border: 1.5px solid var(--color-bg-alt) !important;
+    color: var(--color-blue-dark) !important;
+    font-family: var(--font-heading) !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    text-transform: none !important;
+    padding: 9px 18px !important;
+    border-radius: 999px !important;
+    box-shadow: none !important;
+    transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease !important;
+}
+.um-profile-meta .um-button:hover,
+.um-profile-edit-btn .um-button:hover {
+    border-color: var(--color-blue) !important;
+    color: var(--color-blue) !important;
+    background: var(--color-bg-alt) !important;
+}
+.um-profile-meta .um-button i,
+.um-profile-edit-btn .um-button i {
+    color: inherit !important;
+}
+
+/* Profile navigation tabs */
+.um-profile-nav,
+.um-profile-navbar {
+    background: #ffffff !important;
+    border-bottom: 1px solid var(--color-bg-alt) !important;
+    padding: 0 36px !important;
+}
+.um-profile-nav-item a {
+    font-family: var(--font-heading) !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: var(--color-grey) !important;
+    padding: 16px 14px !important;
+    border-bottom: 2px solid transparent !important;
+    transition: color 0.18s ease, border-color 0.18s ease !important;
+}
+.um-profile-nav-item a:hover {
+    color: var(--color-blue-dark) !important;
+}
+.um-profile-nav-item.active a {
+    color: var(--color-blue-dark) !important;
+    border-bottom-color: var(--color-gold) !important;
+}
+
+/* Hide the tab bar entirely when only one tab is visible */
+.um-profile-nav:has(.um-profile-nav-item:only-child),
+.um-profile-navbar:has(.um-profile-nav-item:only-child) {
+    display: none !important;
+}
+
+/* Profile body */
+.um-profile .um-profile-body {
+    background: #ffffff !important;
+    padding: 36px !important;
+}
+
+/* Empty profile state — calm card with a clear CTA (no frown emoji) */
+.um-profile-note {
+    background: var(--color-bg-alt) !important;
+    border: 1px dashed rgba(27, 51, 128, 0.18) !important;
+    border-radius: 12px !important;
+    padding: 32px 28px !important;
+    text-align: center !important;
+    margin: 8px 0 !important;
+    color: var(--color-grey) !important;
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+}
+.um-profile-note i {
+    display: none !important;
+}
+.um-profile-note span {
+    display: block !important;
+}
+.um-profile-note a {
+    display: inline-block !important;
+    margin-top: 14px !important;
+    background: var(--color-blue) !important;
+    color: #ffffff !important;
+    font-family: var(--font-heading) !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    padding: 10px 22px !important;
+    border-radius: 999px !important;
+    text-decoration: none !important;
+    transition: background 0.18s ease, transform 0.18s ease !important;
+}
+.um-profile-note a:hover {
+    background: var(--color-blue-dark) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Profile field labels (viewing mode) */
+.um-profile.um-viewing .um-field-label label {
+    font-family: var(--font-heading) !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: var(--color-grey) !important;
+}
+.um-profile.um-viewing .um-field-value {
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    color: var(--color-black) !important;
+    line-height: 1.55 !important;
+}
+
+/* Role / location badge — pill in a subtle blue tint */
 .um-profile-role-tag {
     display: inline-block;
     background: var(--color-bg-alt);
     color: var(--color-blue-dark);
     font-family: var(--font-heading);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-top: 4px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-top: 6px;
 }
 
 
@@ -313,68 +358,59 @@ Text Domain: imman-org-child
 
 /* Members grid cards */
 .um-members-grid .um-member {
-    border-radius: 8px !important;
+    border-radius: 12px !important;
     border: 1px solid var(--color-bg-alt) !important;
-    box-shadow: 0 2px 12px rgba(42, 80, 200, 0.06) !important;
-    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease !important;
-    overflow: hidden !important;
     background: #ffffff !important;
+    box-shadow: 0 2px 12px rgba(27, 51, 128, 0.04) !important;
+    overflow: hidden !important;
+    transition: box-shadow 0.22s ease, transform 0.22s ease !important;
 }
-
 .um-members-grid .um-member:hover {
-    box-shadow: 0 8px 28px rgba(42, 80, 200, 0.14) !important;
-    border-color: var(--color-blue) !important;
-    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 32px rgba(27, 51, 128, 0.12) !important;
+    transform: translateY(-2px) !important;
 }
-
-/* Member card avatar */
 .um-members-grid .um-member .um-member-photo img {
-    border-bottom: 3px solid var(--color-gold) !important;
+    border-bottom: none !important;
 }
-
-/* Member card name */
 .um-members-grid .um-member .um-member-name a {
     font-family: var(--font-heading) !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: var(--color-blue-dark) !important;
     font-size: 1rem !important;
-    transition: color 0.2s ease !important;
+    transition: color 0.18s ease !important;
 }
-
 .um-members-grid .um-member .um-member-name a:hover {
-    color: var(--color-gold-dark) !important;
+    color: var(--color-blue) !important;
 }
 
-/* Members search / filter bar */
+/* Filter bar */
 .um-members-filter {
-    background: var(--color-bg-alt) !important;
-    border-radius: 6px !important;
-    padding: 18px 20px !important;
+    background: #ffffff !important;
+    border: 1px solid var(--color-bg-alt) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
     margin-bottom: 28px !important;
-    border: 1px solid rgba(42, 80, 200, 0.08) !important;
 }
-
 .um-search-form input[type="text"] {
-    border-radius: 4px !important;
-    border: 1px solid rgba(0,0,0,0.10) !important;
+    background: var(--color-bg-alt) !important;
+    border: 1px solid var(--color-bg-alt) !important;
+    border-radius: 8px !important;
     font-family: var(--font-body) !important;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+    transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease !important;
 }
-
 .um-search-form input[type="text"]:focus {
+    background: #ffffff !important;
     border-color: var(--color-blue) !important;
     box-shadow: 0 0 0 4px rgba(42, 80, 200, 0.10) !important;
     outline: none !important;
 }
-
 .um-search-btn {
     background: var(--color-blue) !important;
     font-family: var(--font-heading) !important;
-    font-weight: 700 !important;
-    border-radius: 4px !important;
-    transition: background 0.2s ease !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    transition: background 0.18s ease !important;
 }
-
 .um-search-btn:hover {
     background: var(--color-blue-dark) !important;
 }
@@ -384,34 +420,30 @@ Text Domain: imman-org-child
    4. ACCOUNT PAGE
    ----------------------------------------------------------------------------- */
 
-/* Account page tabs */
 .um-account-side li a {
     font-family: var(--font-heading) !important;
     font-size: 0.88rem !important;
     font-weight: 600 !important;
     color: var(--color-grey) !important;
-    border-left: 3px solid transparent !important;
-    padding: 10px 16px !important;
-    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease !important;
-    border-radius: 0 4px 4px 0 !important;
+    border-left: 2px solid transparent !important;
+    padding: 12px 16px !important;
+    border-radius: 0 8px 8px 0 !important;
+    transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease !important;
 }
-
 .um-account-side li a:hover,
 .um-account-side li.current a,
 .um-account-side li.active a {
-    color: var(--color-blue) !important;
+    color: var(--color-blue-dark) !important;
     background: var(--color-bg-alt) !important;
     border-left-color: var(--color-gold) !important;
 }
-
-/* Account section headings */
 .um-account-heading {
     font-family: var(--font-heading) !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: var(--color-blue-dark) !important;
     font-size: 1.2rem !important;
-    letter-spacing: -0.02em !important;
-    border-bottom: 2px solid var(--color-bg-alt) !important;
+    letter-spacing: -0.015em !important;
+    border-bottom: 1px solid var(--color-bg-alt) !important;
     padding-bottom: 12px !important;
     margin-bottom: 24px !important;
 }
@@ -457,12 +489,34 @@ Text Domain: imman-org-child
     }
 
     .um-header {
-        padding: 0 16px 16px !important;
+        padding: 0 20px 20px !important;
     }
 
-    .um-profile-nav {
-        padding: 0 12px !important;
+    .um-profile .um-profile-body {
+        padding: 24px 20px !important;
+    }
+
+    .um-profile-nav,
+    .um-profile-navbar {
+        padding: 0 16px !important;
         overflow-x: auto !important;
         white-space: nowrap !important;
     }
+}
+
+/* -----------------------------------------------------------------------------
+   7. FIXES & POLISH
+   ----------------------------------------------------------------------------- */
+
+/* Fix readability for Ultimate Member buttons (ensure white text on blue) */
+.um .um-button,
+.um a.um-button,
+.um a.um-button:visited {
+    color: #ffffff !important;
+}
+
+/* Remove redundant secondary Register button from the Login form 
+   (The "Register here" link in the footer is preferred) */
+.um-login .um-col-alt .um-button.um-alt {
+    display: none !important;
 }
